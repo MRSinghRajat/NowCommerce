@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="2b63517b93a6f510ce3d393efaba100d" label="Products" max_length="40" name="x_77533_nowcomme_0_products" type="collection">
+        <element choice="1" label="Capacity" max_length="40" name="capacity" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Color" max_length="40" name="color" type="choice">
+            <choice/>
+        </element>
+        <element label="Description" max_length="8000" name="description" type="html"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Photos" max_length="40" name="photos" type="user_image"/>
+        <element choice="1" label="Price" max_length="40" name="price" type="choice">
+            <choice/>
+        </element>
+        <element label="Specification" max_length="8000" name="specification" type="html"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

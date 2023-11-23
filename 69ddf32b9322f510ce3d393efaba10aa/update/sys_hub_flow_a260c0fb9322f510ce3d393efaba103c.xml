@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description/>
+        <internal_name>nowcommerce__get_all_products</internal_name>
+        <label_cache>[]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>NowCommerce - Get All Products</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-23 06:32:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a260c0fb9322f510ce3d393efaba103c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>NowCommerce - Get All Products</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NowCommerce" source="x_77533_nowcomme_0">69ddf32b9322f510ce3d393efaba10aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_update_name>sys_hub_flow_a260c0fb9322f510ce3d393efaba103c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-23 06:34:17</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=a260c0fb9322f510ce3d393efaba103c^sys_idNOT IN1cd088739322f510ce3d393efaba1064"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="NowCommerce - Get All Products">a260c0fb9322f510ce3d393efaba103c</flow>
+        <name>Daily</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-23 06:34:17</sys_created_on>
+        <sys_id>1cd088739322f510ce3d393efaba1064</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-23 06:34:17</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1cd088739322f510ce3d393efaba1064"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>1cd088739322f510ce3d393efaba1064</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-23 06:34:17</sys_created_on>
+        <sys_id>94d088739322f510ce3d393efaba1066</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-23 06:34:17</sys_updated_on>
+        <value>1970-01-01 13:00:00</value>
+        <variable display_value="Time">3ad4edc0c32222002841b63b12d3aee5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_input_89142dc0c32222002841b63b12d3ae8a^id=1cd088739322f510ce3d393efaba1064"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=a260c0fb9322f510ce3d393efaba103c^sys_idNOT IN2660c0fb9322f510ce3d393efaba103e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>a260c0fb9322f510ce3d393efaba103c</id>
+        <name>NowCommerce - Get All Products</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-23 06:32:31</sys_created_on>
+        <sys_id>2660c0fb9322f510ce3d393efaba103e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-23 06:32:31</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=2660c0fb9322f510ce3d393efaba103e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=a260c0fb9322f510ce3d393efaba103c"/>
+</record_update>
