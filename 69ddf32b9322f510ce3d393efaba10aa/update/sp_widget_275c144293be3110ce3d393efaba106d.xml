@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope, $window,spUtil) {
+	/* widget controller */
+	var c = this;
+
+
+	spUtil.recordWatch($scope, "x_77533_nowcomme_0_products", "", function(name, data) {
+		console.log(name); //Returns information about the event that has occurred
+		//alert(data); //Returns the data inserted or updated on the table
+			c.server.update().then(function(response)
+													 {
+
+		})
+	});
+	
+	$scope.redirect= function()
+	{
+		
+				$window.location.href = 'sp?id=product_form_1';
+		
+	}
+
+	$scope.fetchData = function() {
+		// Add loading class to the button
+		document.querySelector('.fetch-button').classList.add('loading');
+		c.data.action = 'fetch'
+
+		c.server.update().then(function(response)
+													 {
+
+
+
+		})
+
+		// Mock fetch call
+		setTimeout(function() {
+			// Mock data fetching
+			console.log('Data fetched');
+
+			// Remove loading class after data is fetched
+			document.querySelector('.fetch-button').classList.remove('loading');
+		}, 2000); // 2 seconds delay to simulate fetch
+	};
+
+	$scope.order = function(item)	
+	{
+		c.data.orderDetails = {
+			action: 'order',
+			item: {
+				title: item.title,
+				variant_id : item.id //variant id
+
+				// Add other properties as needed
+			}
+		};
+
+		c.server.update().then(function(response) {
+
+			if (response ) {
+				$window.location.href = 'sp?id=sc_request&is_new_order=true&table=sc_request&sys_id='+ c.data.id
+			} else {
+				// Handle the case where there is no message in the response
+				// alert('Server did not send a message.');
+			}
+		});
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.fetch-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fetch-button.loading {
+  pointer-events: none;
+  color: transparent;
+  background-color: #007bff;
+  position: relative;
+}
+
+.fetch-button.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  padding: 1em;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1em;
+  box-shadow: 0 5px 5px #e1e1e1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-card h4 {
+  font-size: 1.3em;
+  margin: 0.5em 0;
+  color: black;
+}
+
+.product-card div {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.product-card:hover button {
+  color: #000;
+  background-color: lightblue;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-card {
+    font-size: 0.9em;
+  }
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>sh_list_view</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Shopify List view</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	// populate the 'data' object
+	// e.g., data.table = $sp.getValue('table');
+
+	
+
+	
+	var productsArray = [];
+
+	// New GlideRecord to query the table
+	var gr = new GlideRecord('x_77533_nowcomme_0_products'); // Replace with your actual table name
+	gr.query(); // Add any conditions if necessary, e.g., gr.addQuery('active', true);
+	while (gr.next()) {
+		// Push each product's details into the array
+		productsArray.push({
+			id: gr.getValue('variant_id'),
+			price: gr.getValue('price'), // Replace 'price' with the actual field name for price
+			title: gr.getValue('name'), // Replace 'name' with the actual field name for name
+			details: gr.getValue('description'), // Replace 'description' with the actual field name for description
+			image: gr.getValue('image') // Replace with actual image path
+
+		});
+	}
+	data.items = productsArray;
+
+
+
+
+
+	if (input && input.orderDetails && input.orderDetails.action == "order") {
+		var itemDetails = input.orderDetails.item; // Directly using the object from client
+		try {
+			var userId = gs.getUserID(); // User sys_id who has access to the catalog item
+			var itemId = 'd597fd0e93367110ce3d393efaba10a7'; // Catalog Item sys_id
+			var userGr = new GlideRecord('sys_user');
+			userGr.get(userId);
+			var cartId = gs.generateGUID() + ':for:' + userGr.getValue('user_name');
+			var cartGr = new sn_sc.CartJS(cartId); // Glide Record
+			cartGr.setSpecialInstructions("Automated delivery.");
+			var request =
+					{
+						'sysparm_id': itemId,
+						'sysparm_quantity': '1',
+						'variables':itemDetails
+
+					};
+			var cartDetails = cartGr.addToCart(request); // JS object
+			cartItems = cartGr.getCartItems(); // Glide Record
+			var checkoutInfo = cartGr.checkoutCart(); // JS Object			
+			data.id = checkoutInfo.request_id;
+		}
+		catch (ex) {
+			gs.error("Exception: " + ex);
+		}
+
+	}
+
+
+	if(input && input.action =='fetch')
+	{
+		(function() {
+	
+	try {
+
+		// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+		// sn_fd.FlowAPI.getRunner().action('x_77533_nowcomme_0.fetch_all_products').inBackground().run();
+				
+		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+		var result = sn_fd.FlowAPI.getRunner().action('x_77533_nowcomme_0.fetch_all_products').inForeground().run();
+		var outputs = result.getOutputs();
+
+		// Get Outputs:
+		// Note: outputs can only be retrieved when executing synchronously.
+		var output = outputs.output // Array.Object
+		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+	}
+	
+})();
+
+	}
+
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 08:21:21</sys_created_on>
+        <sys_id>275c144293be3110ce3d393efaba106d</sys_id>
+        <sys_mod_count>120</sys_mod_count>
+        <sys_name>Shopify List view</sys_name>
+        <sys_package display_value="NowCommerce" source="x_77533_nowcomme_0">69ddf32b9322f510ce3d393efaba10aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_update_name>sp_widget_275c144293be3110ce3d393efaba106d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-14 15:37:55</sys_updated_on>
+        <template><![CDATA[<div class="button-container">
+  <button class="fetch-button" ng-click="fetchData()">Fetch Data</button>
+</div>
+
+<div class="container">
+  <div class="card" ng-repeat="item in data.items" ng-if="item">
+    <div class="product-card" ng-if="item.image && item.title && item.price">
+      <img ng-src="{{item.image}}" alt="{{item.title}}">
+      <h4 ng-click="redirect()">{{item.title}}</h4>
+      <div>
+        <span>${{item.price}}</span>
+        <button ng-click="order(item)">+</button>
+      </div>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

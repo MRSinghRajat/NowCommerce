@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD89655bb5b17a3110c23fbf48fe31ca73</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>69ddf32b9322f510ce3d393efaba10aa</scope_name>
+        <serialized_content>{"FlowDesigner:FD89655bb5b17a3110c23fbf48fe31ca73":{"$COCollectionField":[{"Object":{}}],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD89655bb5b17a3110c23fbf48fe31ca73.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"6c38824e-ad19-4f1e-8773-1be6df93eb7f\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"output\",\"mandatory\":\"false\",\"child_name\":\"results_child0\",\"uiUniqueId\":\"9e6b48a6-0de4-4fbd-91e1-20e33d1cb859\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD89655bb5b17a3110c23fbf48fe31ca73\",\"child_label\":\"results_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"a540d5c0-8fb3-4344-b25d-f8d6be690b37\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"0e1c2975-6900-469e-b8ae-fc43178fb6ed\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 03:10:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4d655bb5937a3110ce3d393efaba1073</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD89655bb5b17a3110c23fbf48fe31ca73</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NowCommerce" source="x_77533_nowcomme_0">69ddf32b9322f510ce3d393efaba10aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_update_name>sys_complex_object_4d655bb5937a3110ce3d393efaba1073</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 03:10:52</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

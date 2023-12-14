@@ -2,37 +2,35 @@
     <sys_hub_flow action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
-        <active>false</active>
+        <active>true</active>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=972388000,viewActivatedIn=naturalLanguage</attributes>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
-        <compiler_build/>
         <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
         <copied_from_name>FlowTemplate_Empty</copied_from_name>
         <description/>
         <internal_name>nowcommerce__get_all_products</internal_name>
-        <label_cache>[]</label_cache>
-        <latest_snapshot/>
-        <master_snapshot/>
+        <label_cache>[{"name":"7c195afa-5129-4ae8-a736-f94ffc1cac6a.item","label":"2 - For Each➛results_child0","reference_display":"results_child0","type":"object","base_type":"object","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"22205a24-b52a-42e1-97e8-d4d3569b0299.output","label":"1 - Fetch All Products➛output","reference_display":"output","type":"array.object","base_type":"array.object","attributes":{"sourceId":"6c38824e-ad19-4f1e-8773-1be6df93eb7f","child_name":"results_child0","uiUniqueId":"9e6b48a6-0de4-4fbd-91e1-20e33d1cb859","uiTypeLabel":"Array.Object","co_type_name":"FD1c1d5135fe7231103c5f7796f56932b2","child_label":"results_child0","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"a540d5c0-8fb3-4344-b25d-f8d6be690b37","uiType":"array.object","child_type":"object","child_uiUniqueId":"0e1c2975-6900-469e-b8ae-fc43178fb6ed"}}]</label_cache>
+        <master_snapshot>02cd3ddb93b67110ce3d393efaba10f0</master_snapshot>
         <name>NowCommerce - Get All Products</name>
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <remote_trigger_id/>
+        <remote_trigger_id>06cd7ddb93b67110ce3d393efaba102c</remote_trigger_id>
         <run_as>user</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>draft</status>
+        <status>published</status>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-11-23 06:32:31</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a260c0fb9322f510ce3d393efaba103c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>NowCommerce - Get All Products</sys_name>
         <sys_overrides/>
         <sys_package display_value="NowCommerce" source="x_77533_nowcomme_0">69ddf32b9322f510ce3d393efaba10aa</sys_package>
@@ -40,11 +38,69 @@
         <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
         <sys_update_name>sys_hub_flow_a260c0fb9322f510ce3d393efaba103c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-23 06:34:17</sys_updated_on>
+        <sys_updated_on>2023-12-04 12:39:01</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=a260c0fb9322f510ce3d393efaba103c"/>
     <sys_variable_value action="delete_multiple" query="document_key=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <run_period/>
+        <run_start>2023-12-04 12:39:00</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>06cd7ddb93b67110ce3d393efaba102c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <time>1970-01-01 21:00:00</time>
+        <timer_type>11</timer_type>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:06cd7ddb93b67110ce3d393efaba102c^sys_idNOT IN8acd7ddb93b67110ce3d393efaba102c"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <max_drift/>
+        <name>Trigger:06cd7ddb93b67110ce3d393efaba102c</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start>2023-12-04 12:39:00</run_start>
+        <run_time>1970-01-01 21:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('06cd7ddb93b67110ce3d393efaba102c');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>8acd7ddb93b67110ce3d393efaba102c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">06cd7ddb93b67110ce3d393efaba102c</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=a260c0fb9322f510ce3d393efaba103c"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=a260c0fb9322f510ce3d393efaba103c^sys_idNOT IN1cd088739322f510ce3d393efaba1064"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment/>
@@ -55,10 +111,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-11-23 06:34:17</sys_created_on>
         <sys_id>1cd088739322f510ce3d393efaba1064</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-23 06:34:17</sys_updated_on>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
         <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -97,15 +153,454 @@
     <sys_hub_flow_input action="delete_multiple" query="model=a260c0fb9322f510ce3d393efaba103c"/>
     <sys_hub_flow_output action="delete_multiple" query="model=a260c0fb9322f510ce3d393efaba103c"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=a260c0fb9322f510ce3d393efaba103c"/>
-    <sys_hub_action_instance action="delete_multiple" query="flow=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=a260c0fb9322f510ce3d393efaba103c^sys_idNOT IN4a9b55b193723110ce3d393efaba10d0,999d1d3593723110ce3d393efaba1034,c0fb1db193723110ce3d393efaba105b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Fetch All Products">215ad93193723110ce3d393efaba10b8</action_type>
+        <action_type_parent display_value="Fetch All Products">1b7d5c3f93a2f510ce3d393efaba107d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="NowCommerce - Get All Products">a260c0fb9322f510ce3d393efaba103c</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-29 18:18:45</sys_created_on>
+        <sys_id>4a9b55b193723110ce3d393efaba10d0</sys_id>
+        <sys_mod_count>58</sys_mod_count>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 21:00:03</sys_updated_on>
+        <ui_id>22205a24-b52a-42e1-97e8-d4d3569b0299</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4a9b55b193723110ce3d393efaba10d0"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4a9b55b193723110ce3d393efaba10d0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4a9b55b193723110ce3d393efaba10d0"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="NowCommerce - Get All Products">a260c0fb9322f510ce3d393efaba103c</flow>
+        <order>3</order>
+        <parent_ui_id>7c195afa-5129-4ae8-a736-f94ffc1cac6a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-29 18:27:26</sys_created_on>
+        <sys_id>999d1d3593723110ce3d393efaba1034</sys_id>
+        <sys_mod_count>54</sys_mod_count>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 21:00:03</sys_updated_on>
+        <ui_id>2fc0988d-2a37-48a0-8707-2f664b21317d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=999d1d3593723110ce3d393efaba1034"/>
+    <sys_element_mapping action="delete_multiple" query="id=999d1d3593723110ce3d393efaba1034"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>999d1d3593723110ce3d393efaba1034</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-29 18:27:26</sys_created_on>
+        <sys_id>599d1d3593723110ce3d393efaba1035</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 03:02:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Test output : {{22205a24-b52a-42e1-97e8-d4d3569b0299.output}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=999d1d3593723110ce3d393efaba1034^sys_idNOT IN2ee6a7b993ba3110ce3d393efaba10a7"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>log_message</input_name>
+        <instance>999d1d3593723110ce3d393efaba1034</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"log_message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n// The variable name \u0027item\u0027 should be replaced with whatever variable your tool uses for the current loop context.\nvar title \u003d JSON.stringify(fd_data._2__for_each.item)  ; // Replace \u0027item\u0027 with the loop context variable\n\n\n// Construct the log message\nvar logMessage \u003d \u0027Title: \u0027 + title ;\n\n// This returns the log message to be logged\nreturn logMessage;\n"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 04:27:26</sys_created_on>
+        <sys_id>2ee6a7b993ba3110ce3d393efaba10a7</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 07:59:05</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=999d1d3593723110ce3d393efaba1034"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="NowCommerce - Get All Products">a260c0fb9322f510ce3d393efaba103c</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-29 18:20:14</sys_created_on>
+        <sys_id>c0fb1db193723110ce3d393efaba105b</sys_id>
+        <sys_mod_count>56</sys_mod_count>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 21:00:03</sys_updated_on>
+        <ui_id>158ffc27-a2af-4140-b02f-444924b32c6d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c0fb1db193723110ce3d393efaba105b"/>
+    <sys_element_mapping action="delete_multiple" query="id=c0fb1db193723110ce3d393efaba105b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>c0fb1db193723110ce3d393efaba105b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-29 18:20:14</sys_created_on>
+        <sys_id>08fb1db193723110ce3d393efaba105c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-29 18:20:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Test Result {{22205a24-b52a-42e1-97e8-d4d3569b0299.output}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c0fb1db193723110ce3d393efaba105b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c0fb1db193723110ce3d393efaba105b"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=a260c0fb9322f510ce3d393efaba103c"/>
-    <sys_hub_flow_logic action="delete_multiple" query="flow=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=a260c0fb9322f510ce3d393efaba103c^sys_idNOT IN199d1d3593723110ce3d393efaba102d"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">dd9d1d3593723110ce3d393efaba102c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="NowCommerce - Get All Products">a260c0fb9322f510ce3d393efaba103c</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-29 18:27:25</sys_created_on>
+        <sys_id>199d1d3593723110ce3d393efaba102d</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:01</sys_updated_on>
+        <ui_id>7c195afa-5129-4ae8-a736-f94ffc1cac6a</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=199d1d3593723110ce3d393efaba102d"/>
+    <sys_element_mapping action="delete_multiple" query="id=199d1d3593723110ce3d393efaba102d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>199d1d3593723110ce3d393efaba102d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-29 18:27:26</sys_created_on>
+        <sys_id>d99d1d3593723110ce3d393efaba1030</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-29 18:27:26</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{22205a24-b52a-42e1-97e8-d4d3569b0299.output}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=199d1d3593723110ce3d393efaba102d"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=199d1d3593723110ce3d393efaba102d"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=a260c0fb9322f510ce3d393efaba103c"/>
     <sys_hub_flow_variable action="delete_multiple" query="model=a260c0fb9322f510ce3d393efaba103c"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_a260c0fb9322f510ce3d393efaba103c"/>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a260c0fb9322f510ce3d393efaba103c"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_a260c0fb9322f510ce3d393efaba103c"/>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a260c0fb9322f510ce3d393efaba103c"/>
-    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=a260c0fb9322f510ce3d393efaba103c"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name/>
+        <description/>
+        <internal_name>nowcommerce__get_all_products</internal_name>
+        <label_cache>[{"name":"7c195afa-5129-4ae8-a736-f94ffc1cac6a.item","label":"2 - For Each➛results_child0","reference_display":"results_child0","type":"object","base_type":"object","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"22205a24-b52a-42e1-97e8-d4d3569b0299.output","label":"1 - Fetch All Products➛output","reference_display":"output","type":"array.object","base_type":"array.object","attributes":{"sourceId":"6c38824e-ad19-4f1e-8773-1be6df93eb7f","child_name":"results_child0","uiUniqueId":"9e6b48a6-0de4-4fbd-91e1-20e33d1cb859","uiTypeLabel":"Array.Object","co_type_name":"FD1c1d5135fe7231103c5f7796f56932b2","child_label":"results_child0","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"a540d5c0-8fb3-4344-b25d-f8d6be690b37","uiType":"array.object","child_type":"object","child_uiUniqueId":"0e1c2975-6900-469e-b8ae-fc43178fb6ed"}}]</label_cache>
+        <master>true</master>
+        <name>NowCommerce - Get All Products</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="NowCommerce - Get All Products">a260c0fb9322f510ce3d393efaba103c</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>02cd3ddb93b67110ce3d393efaba10f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_variable_value action="delete_multiple" query="document_key=02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=02cd3ddb93b67110ce3d393efaba10f0^sys_idNOT IN8ecd7ddb93b67110ce3d393efaba1008"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="NowCommerce - Get All Products">02cd3ddb93b67110ce3d393efaba10f0</flow>
+        <name>Daily</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>8ecd7ddb93b67110ce3d393efaba1008</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8ecd7ddb93b67110ce3d393efaba1008"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8ecd7ddb93b67110ce3d393efaba1008</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>4ecd7ddb93b67110ce3d393efaba1009</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <value>1970-01-01 13:00:00</value>
+        <variable display_value="Time">3ad4edc0c32222002841b63b12d3aee5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_input_89142dc0c32222002841b63b12d3ae8a^id=8ecd7ddb93b67110ce3d393efaba1008"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=02cd3ddb93b67110ce3d393efaba10f0^sys_idNOT IN4ecd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>02cd3ddb93b67110ce3d393efaba10f0</id>
+        <name>NowCommerce - Get All Products</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>4ecd3ddb93b67110ce3d393efaba10f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=4ecd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=02cd3ddb93b67110ce3d393efaba10f0^sys_idNOT IN0ecd7ddb93b67110ce3d393efaba1007,4acd3ddb93b67110ce3d393efaba10fd,82cd7ddb93b67110ce3d393efaba1002"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="NowCommerce - Get All Products">02cd3ddb93b67110ce3d393efaba10f0</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>0ecd7ddb93b67110ce3d393efaba1007</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <ui_id>158ffc27-a2af-4140-b02f-444924b32c6d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0ecd7ddb93b67110ce3d393efaba1007"/>
+    <sys_element_mapping action="delete_multiple" query="id=0ecd7ddb93b67110ce3d393efaba1007"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>0ecd7ddb93b67110ce3d393efaba1007</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>cacd7ddb93b67110ce3d393efaba1008</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Test Result {{22205a24-b52a-42e1-97e8-d4d3569b0299.output}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0ecd7ddb93b67110ce3d393efaba1007"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0ecd7ddb93b67110ce3d393efaba1007"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Fetch All Products">215ad93193723110ce3d393efaba10b8</action_type>
+        <action_type_parent display_value="Fetch All Products">1b7d5c3f93a2f510ce3d393efaba107d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="NowCommerce - Get All Products">02cd3ddb93b67110ce3d393efaba10f0</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>4acd3ddb93b67110ce3d393efaba10fd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <ui_id>22205a24-b52a-42e1-97e8-d4d3569b0299</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4acd3ddb93b67110ce3d393efaba10fd"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4acd3ddb93b67110ce3d393efaba10fd"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4acd3ddb93b67110ce3d393efaba10fd"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="NowCommerce - Get All Products">02cd3ddb93b67110ce3d393efaba10f0</flow>
+        <order>3</order>
+        <parent_ui_id>7c195afa-5129-4ae8-a736-f94ffc1cac6a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>82cd7ddb93b67110ce3d393efaba1002</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <ui_id>2fc0988d-2a37-48a0-8707-2f664b21317d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=82cd7ddb93b67110ce3d393efaba1002"/>
+    <sys_element_mapping action="delete_multiple" query="id=82cd7ddb93b67110ce3d393efaba1002"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>82cd7ddb93b67110ce3d393efaba1002</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>4ecd7ddb93b67110ce3d393efaba1003</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Test output : {{22205a24-b52a-42e1-97e8-d4d3569b0299.output}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=82cd7ddb93b67110ce3d393efaba1002^sys_idNOT IN02cd7ddb93b67110ce3d393efaba1003"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>log_message</input_name>
+        <instance>82cd7ddb93b67110ce3d393efaba1002</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"log_message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n// The variable name \u0027item\u0027 should be replaced with whatever variable your tool uses for the current loop context.\nvar title \u003d JSON.stringify(fd_data._2__for_each.item)  ; // Replace \u0027item\u0027 with the loop context variable\n\n\n// Construct the log message\nvar logMessage \u003d \u0027Title: \u0027 + title ;\n\n// This returns the log message to be logged\nreturn logMessage;\n"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>02cd7ddb93b67110ce3d393efaba1003</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=82cd7ddb93b67110ce3d393efaba1002"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=02cd3ddb93b67110ce3d393efaba10f0^sys_idNOT IN02cd3ddb93b67110ce3d393efaba10f4"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">dd9d1d3593723110ce3d393efaba102c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="NowCommerce - Get All Products">02cd3ddb93b67110ce3d393efaba10f0</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>02cd3ddb93b67110ce3d393efaba10f4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <ui_id>7c195afa-5129-4ae8-a736-f94ffc1cac6a</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=02cd3ddb93b67110ce3d393efaba10f4"/>
+    <sys_element_mapping action="delete_multiple" query="id=02cd3ddb93b67110ce3d393efaba10f4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>02cd3ddb93b67110ce3d393efaba10f4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_id>cacd3ddb93b67110ce3d393efaba10f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{22205a24-b52a-42e1-97e8-d4d3569b0299.output}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=02cd3ddb93b67110ce3d393efaba10f4"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=02cd3ddb93b67110ce3d393efaba10f4"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_02cd3ddb93b67110ce3d393efaba10f0"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>a260c0fb9322f510ce3d393efaba103c</sys_id>
+        <latest_snapshot>02cd3ddb93b67110ce3d393efaba10f0</latest_snapshot>
+        <compiler_build>glide-vancouver-07-06-2023__patch2-hotfix1-10-04-2023_10-06-2023_1235.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=a260c0fb9322f510ce3d393efaba103c^sys_idNOT INdacd7ddb93b67110ce3d393efaba102e"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"dacd7ddb93b67110ce3d393efaba102e","name":"plan","plan_signature":null}}</plan>
+        <plan_id>a260c0fb9322f510ce3d393efaba103c</plan_id>
+        <snapshot>6d70fbdf93be7110ce3d393efaba101f</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-04 12:39:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dacd7ddb93b67110ce3d393efaba102e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:39:00</sys_updated_on>
+        <trigger display_value="">06cd7ddb93b67110ce3d393efaba102c</trigger>
+    </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=a260c0fb9322f510ce3d393efaba103c"/>
 </record_update>

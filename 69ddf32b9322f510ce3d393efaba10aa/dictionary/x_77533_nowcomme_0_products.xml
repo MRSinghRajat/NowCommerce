@@ -7,14 +7,15 @@
             <choice/>
         </element>
         <element label="Description" max_length="8000" name="description" type="html"/>
+        <element label="Image" max_length="1024" name="image" type="url"/>
         <element label="Name" max_length="40" name="name" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Photos" max_length="40" name="photos" type="user_image"/>
-        <element choice="1" label="Price" max_length="40" name="price" type="choice">
-            <choice/>
-        </element>
+        <element label="Price" max_length="40" name="price" type="string"/>
+        <element label="Product Id" max_length="40" name="product_id" type="string"/>
         <element label="Specification" max_length="8000" name="specification" type="html"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Variant Id" max_length="40" name="variant_id" type="string"/>
         <index name="index">
             <element name="sys_class_name"/>
         </index>

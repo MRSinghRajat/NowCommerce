@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($timeout) {
+	/* widget controller */
+	var c = this
+
+
+	$timeout(function() {
+
+
+		var  mySwiper = new Swiper ('.swiper-container', {
+			// Optional parameters
+			direction: 'horizontal',
+			loop: true,
+			speed: 300,
+			mousewheel: true,
+			coverflowEffect: {
+				rotate: 30,
+				slideShadows: true
+			},
+			// If we need pagination
+			pagination: {
+				el: '.swiper-pagination',
+			},
+
+			// Navigation arrows
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+
+			// And if we need scrollbar
+			scrollbar: {
+				el: '.swiper-scrollbar',
+			},
+		})
+
+		}, 1000, false);
+
+
+
+	c.data.product = {
+		name: 'iPhone 15 Pro',
+		price: '$999',
+		images: [
+			{ src: '10off.png', alt: 'Black Titanium iPhone' },
+			{ src: '10on.png', alt: 'White Titanium iPhone' },
+			{ src: '10startoff.png', alt: 'Blue Titanium iPhone' },
+			// Add more images as needed
+		],
+		colors: [
+			{ label: 'Natural Titanium', value: 'natural_titanium' },
+			{ label: 'White Titanium', value: 'white_titanium' },
+			{ label: 'Black Titanium', value: 'black_titanium' },
+			// Add more colors as needed
+		],
+		capacities: [
+			{ label: '128GB', value: '128' },
+			{ label: '256GB', value: '256' },
+			{ label: '512GB', value: '512' },
+			// Add more capacities as needed
+		],
+		pricingPlans: [
+			{ label: 'Fast Forward Pricing - 2 Year Voice & Data (+$3/month)', value: 'fast_forward' },
+			{ label: 'Plus Pricing - 2 Year Voice & Data (+$29.17/month)', value: 'plus_pricing' },
+			{ label: '2 Year Voice & Data', value: '2_year_voice_data' },
+			{ label: 'Monthly or Prepaid', value: 'monthly_prepaid' },
+			// Add more plans as needed
+		]
+	};
+
+	c.data.selectedColor = c.data.product.colors[0].value;
+	c.data.selectedCapacity = c.data.product.capacities[0].value;
+	c.data.selectedPlan = c.data.product.pricingPlans[0].value;
+
+	// Add functions for interaction if needed
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.product-widget {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.carousel {
+  margin-bottom: 1rem;
+}
+
+.product-info {
+  padding: 0 15px;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.product-info .price {
+  font-size: 1.5rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.color-selection,
+.capacity-selection,
+.pricing-plans {
+  margin-bottom: 1rem;
+}
+
+.color-options,
+.capacity-options,
+.pricing-plans ul {
+  list-style: none;
+  padding: 0;
+}
+
+.color-options li,
+.capacity-options li,
+.pricing-plans li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.color-options input[type="radio"],
+.capacity-options input[type="radio"],
+.pricing-plans input[type="radio"] {
+  display: none;
+}
+
+.color-options label,
+.capacity-options label,
+.pricing-plans label {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.color-options label:hover,
+.capacity-options label:hover,
+.pricing-plans label:hover {
+  border-color: #333;
+}
+
+.color-options input[type="radio"]:checked + label,
+.capacity-options input[type="radio"]:checked + label,
+.pricing-plans input[type="radio"]:checked + label {
+  border-color: #333;
+  background-color: #f8f8f8;
+}
+
+
+/* Ensure your CSS only affects your widget to prevent global style conflicts */
+#productCarousel {
+  /* Adjust the carousel height as needed */
+  height: 500px;
+}
+
+#productCarousel .carousel-inner .carousel-item {
+  height: 500px;
+}
+
+#productCarousel .carousel-inner img {
+  height: 500px;
+  object-fit: cover; /* This makes sure that images cover the div without stretching */
+}
+
+/* Style the carousel controls to match your design */
+#productCarousel .carousel-control-prev-icon,
+#productCarousel .carousel-control-next-icon {
+  height: 40px;
+  width: 40px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+
+#productCarousel .carousel-control-prev-icon:hover,
+#productCarousel .carousel-control-next-icon:hover {
+  background-color: #000000;
+}
+
+#productCarousel .carousel-control-prev-icon:after {
+  content: '&lt;';
+  font-size: 20px;
+  line-height: 40px;
+  color: black;
+}
+
+#productCarousel .carousel-control-next-icon:after {
+  content: '&gt;';
+  font-size: 20px;
+  line-height: 40px;
+  color: black;
+}
+
+.swiper-slide img{
+  
+  object-fit: cover;
+}
+
+/* Customize other elements as needed to match the UI */
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>product_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>NC- Product Form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  // Server-side code to fetch product details from ServiceNow or external APIs
+  data.product = {
+    // Sample data, replace with actual data fetching logic
+    name: 'iPhone 15 Pro',
+    price: '$999',
+    images: [
+      { src: '10off.png', alt: 'Black Titanium iPhone' },
+      { src: '/path/to/white-titanium.jpg', alt: 'White Titanium iPhone' },
+      { src: '/path/to/blue-titanium.jpg', alt: 'Blue Titanium iPhone' },
+      // Add more images as needed
+    ],
+    colors: [
+      { label: 'Natural Titanium', value: 'natural_titanium' },
+      { label: 'White Titanium', value: 'white_titanium' },
+      { label: 'Black Titanium', value: 'black_titanium' },
+      // Add more colors as needed
+    ],
+    capacities: [
+      { label: '128GB', value: '128' },
+      { label: '256GB', value: '256' },
+      { label: '512GB', value: '512' },
+      // Add more capacities as needed
+    ],
+    pricingPlans: [
+      { label: 'Fast Forward Pricing - 2 Year Voice & Data (+$3/month)', value: 'fast_forward' },
+      { label: 'Plus Pricing - 2 Year Voice & Data (+$29.17/month)', value: 'plus_pricing' },
+      { label: '2 Year Voice & Data', value: '2_year_voice_data' },
+      { label: 'Monthly or Prepaid', value: 'monthly_prepaid' },
+      // Add more plans as needed
+    ]
+  };
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-23 14:29:08</sys_created_on>
+        <sys_id>f33da977932af510ce3d393efaba10df</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>NC- Product Form</sys_name>
+        <sys_package display_value="NowCommerce" source="x_77533_nowcomme_0">69ddf32b9322f510ce3d393efaba10aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowCommerce">69ddf32b9322f510ce3d393efaba10aa</sys_scope>
+        <sys_update_name>sp_widget_f33da977932af510ce3d393efaba10df</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-04 12:13:45</sys_updated_on>
+        <template><![CDATA[<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+<div class="product-widget">
+  <div class="row">
+    <div class="col-md-6">
+
+
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="https://cdn.shopify.com/s/files/1/0637/4188/6654/products/black-bag-over-the-shoulder_925x_d07ba696-fc11-45a3-9171-22bd57a78fb8.jpg?v=1701419142" alt=""></div>
+          <div class="swiper-slide"><img src="https://cdn.shopify.com/s/files/1/0637/4188/6654/products/man-adjusts-blue-tuxedo-bowtie_925x_72e8f0fe-c86e-4407-9425-9191145c88b9.jpg?v=1701419157" alt=""></div>
+          <div class="swiper-slide"><img src="https://cdn.shopify.com/s/files/1/0637/4188/6654/products/red-plaid-shirt_925x_7aa84d78-ad15-4d1f-b323-f6747ea983a4.jpg?v=1701419151" alt=""></div>
+      </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+    </div>
+
+
+
+    <div class="col-md-6">
+      <div class="product-info">
+        <h1>{{c.data.product.name}}</h1>
+        <p class="price">Starting at {{c.data.product.price}}</p>
+        <div class="color-selection">
+          <h3>Color:</h3>
+          <ul class="color-options">
+            <li ng-repeat="color in c.data.product.colors">
+              <input type="radio" id="{{color.value}}" name="color" ng-model="c.data.selectedColor" ng-value="color.value">
+              <label for="{{color.value}}">{{color.label}}</label>
+            </li>
+          </ul>
+        </div>
+        <div class="capacity-selection">
+          <h3>Capacity:</h3>
+          <ul class="capacity-options">
+            <li ng-repeat="capacity in c.data.product.capacities">
+              <input type="radio" id="{{capacity.value}}" name="capacity" ng-model="c.data.selectedCapacity" ng-value="capacity.value">
+              <label for="{{capacity.value}}">{{capacity.label}}</label>
+            </li>
+          </ul>
+        </div>
+        <div class="pricing-plans">
+          <h3>Pricing:</h3>
+          <ul>
+            <li ng-repeat="plan in c.data.product.pricingPlans">
+              <input type="radio" id="{{plan.value}}" name="plan" ng-model="c.data.selectedPlan" ng-value="plan.value">
+              <label for="{{plan.value}}">{{plan.label}}</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>
